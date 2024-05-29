@@ -7,8 +7,8 @@ requires = [
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "pyiron_module_template"
-description = "pyiron_module_template - Your pyiron-like module."
+name = "node_library"
+description = "node_library - Your pyiron-like module."
 readme = "docs/README.md"
 keywords = [ "pyiron",]
 requires-python = ">=3.9, <3.13"
@@ -36,18 +36,18 @@ file = "LICENSE"
 
 [project.urls]
 Homepage = "https://pyiron.org/"
-Documentation = "https://pyiron_module_template.readthedocs.io"
-Repository = "https://github.com/pyiron/pyiron_module_template"
+Documentation = "https://node_library.readthedocs.io"
+Repository = "https://github.com/pyiron/node_library"
 
 [tool.versioneer]
 VCS = "git"
 style = "pep440-pre"
-versionfile_source = "pyiron_module_template/_version.py"
-parentdir_prefix = "pyiron_module_template"
-tag_prefix = "pyiron_module_template-"
+versionfile_source = "node_library/_version.py"
+parentdir_prefix = "node_library"
+tag_prefix = "node_library-"
 
 [tool.setuptools.packages.find]
-include = [ "pyiron_module_template*",]
+include = [ "node_library*",]
 
 [tool.setuptools.dynamic.version]
-attr = "pyiron_module_template.__version__"
+attr = "node_library.__version__"

@@ -1,1 +1,1 @@
-pyiron_module_template/_version.py export-subst
+node_library/_version.py export-subst
