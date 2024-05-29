@@ -3,7 +3,7 @@ from pyiron_workflow.function import as_function_node
 
 @as_function_node("out")
 def Static(atoms, engine=None, keys_to_store=None):
-    from pyiron_workflow.node_library.atomistic.calculator.data import OutputCalcStatic
+    from node_library.jnmpi_nodes.atomistic.calculator.data import OutputCalcStatic
 
     if engine is None:
         from ase.calculators.emt import EMT
@@ -23,7 +23,7 @@ def Static(atoms, engine=None, keys_to_store=None):
 @as_function_node("structure", "out")
 def Minimize(atoms, engine=None, fmax=0.005, log_file="tmp.log"):
     from ase.optimize import BFGS
-    from pyiron_workflow.node_library.atomistic.calculator.data import (
+    from node_library.jnmpi_nodes.atomistic.calculator.data import (
         OutputCalcMinimize,
     )
 

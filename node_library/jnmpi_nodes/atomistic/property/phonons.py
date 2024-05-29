@@ -58,7 +58,7 @@ def CreatePhonopy(
         self.phonopy, parameters=generate_supercells_parameters
     )
 
-    from pyiron_workflow.node_library.atomistic.calculator.ase import Static
+    from node_library.jnmpi_nodes.atomistic.calculator.ase import Static
     from pyiron_workflow.for_loop import for_node
 
     self.gs = for_node(
@@ -68,7 +68,7 @@ def CreatePhonopy(
         engine=engine,
     )
 
-    # from pyiron_workflow.node_library.standard import GetItem
+    # from node_library.jnmpi_nodes.standard import GetItem
     # self.forces = for_node(
     #     GetItem,
     #     iter_on=("obj",),
@@ -77,7 +77,7 @@ def CreatePhonopy(
     # )["getitem"]
     self.forces = DictsToList(self.gs.outputs.df["out"], "forces")
 
-    from pyiron_workflow.node_library.standard import SetAttr
+    from node_library.jnmpi_nodes.standard import SetAttr
 
     self.phonopy_with_forces = SetAttr(self.phonopy, "forces", self.forces)
 

@@ -6,7 +6,7 @@ from pyiron_atomistics.atomistics.structure.atoms import Atoms
 
 from pyiron_workflow.workflow import Workflow
 
-from pyiron_workflow.node_library.dev_tools import VarType, FileObject
+from node_library.jnmpi_nodes.dev_tools import VarType, FileObject
 
 
 @Workflow.wrap.as_function_node("calculator")

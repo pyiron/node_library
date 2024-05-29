@@ -30,7 +30,7 @@ def Bulk(
 def CubicBulkCell(
     wf, element: str, cell_size: int = 1, vacancy_index: int | None = None
 ):
-    from pyiron_workflow.node_library.atomistic.structure.transform import (
+    from node_library.jnmpi_nodes.atomistic.structure.transform import (
         CreateVacancy,
         Repeat,
     )

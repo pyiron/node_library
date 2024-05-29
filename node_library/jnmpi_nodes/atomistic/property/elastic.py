@@ -1,7 +1,7 @@
 import numpy as np
 
 from pyiron_workflow.function import as_function_node
-from pyiron_workflow.node_library.dev_tools import wf_data_class
+from node_library.jnmpi_nodes.dev_tools import wf_data_class
 from dataclasses import field
 
 from atomistics.workflows.elastic.symmetry import (
@@ -44,12 +44,12 @@ def elastic_constants(structure, calculator=None, engine=None):
     structure_table = generate_structures(structure).run()
 
     if engine is None:
-        from pyiron_workflow.node_library.atomistic.engine.ase import M3GNet
+        from node_library.jnmpi_nodes.atomistic.engine.ase import M3GNet
 
         engine = M3GNet()
 
     if calculator is None:
-        from pyiron_workflow.node_library.atomistic.calculator.ase import (
+        from node_library.jnmpi_nodes.atomistic.calculator.ase import (
             static as calculator,
         )
 

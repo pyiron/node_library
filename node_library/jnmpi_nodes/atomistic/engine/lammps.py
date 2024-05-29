@@ -8,14 +8,14 @@ from typing import Optional
 from pyiron_workflow.function import as_function_node
 from pyiron_workflow.workflow import Workflow
 
-from pyiron_workflow.node_library.atomistic.calculator.data import (
+from node_library.jnmpi_nodes.atomistic.calculator.data import (
     InputCalcMinimize,
     InputCalcMD,
     InputCalcStatic,
 )
 
-from pyiron_workflow.node_library.dev_tools import FileObject, parse_input_kwargs
-from pyiron_workflow.node_library.dev_tools import wf_data_class
+from node_library.jnmpi_nodes.dev_tools import FileObject, parse_input_kwargs
+from node_library.jnmpi_nodes.dev_tools import wf_data_class
 
 from pyiron_atomistics.lammps.control import LammpsControl
 
@@ -182,7 +182,7 @@ def Collect(
 ):
     import numpy as np
 
-    from pyiron_workflow.node_library.atomistic.calculator.data import (
+    from node_library.jnmpi_nodes.atomistic.calculator.data import (
         OutputCalcStatic,
         OutputCalcMinimize,
         OutputCalcMD,
@@ -252,8 +252,8 @@ def get_calculators():
 
 from pyiron_workflow.macro import as_macro_node
 
-# from pyiron_workflow.node_library.atomistic.engine.lammps import get_calculators
-# from pyiron_workflow.node_library.dev_tools import set_replacer
+# from node_library.jnmpi_nodes.atomistic.engine.lammps import get_calculators
+# from node_library.jnmpi_nodes.dev_tools import set_replacer
 
 from ase import Atoms
 

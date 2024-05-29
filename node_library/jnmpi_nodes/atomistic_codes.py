@@ -1,6 +1,6 @@
 from pyiron_workflow.macro import as_macro_node
-from pyiron_workflow.node_library.atomistic.engine.lammps import get_calculators
-from pyiron_workflow.node_library.dev_tools import set_replacer
+from node_library.jnmpi_nodes.atomistic.engine.lammps import get_calculators
+from node_library.jnmpi_nodes.dev_tools import set_replacer
 
 from ase import Atoms
 

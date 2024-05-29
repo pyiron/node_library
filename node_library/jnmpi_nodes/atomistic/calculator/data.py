@@ -1,7 +1,7 @@
 from typing import Optional
 from dataclasses import field
 
-from pyiron_workflow.node_library.dev_tools import wf_data_class, wfMetaData
+from node_library.jnmpi_nodes.dev_tools import wf_data_class, wfMetaData
 
 
 @wf_data_class()
