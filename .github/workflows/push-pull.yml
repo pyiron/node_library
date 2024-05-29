@@ -11,3 +11,8 @@ jobs:
   pyiron:
     uses: pyiron/actions/.github/workflows/push-pull.yml@actions-3.1.0
     secrets: inherit
+    with:
+      do-unit-tests: false
+      do-codacy: false
+      do-benchmark-tests: false
+      notebooks-env-files: .ci_support/environment.yml .ci_support/environment-jnmpi_nodes.yml
