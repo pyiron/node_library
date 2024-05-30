@@ -7,8 +7,8 @@ requires = [
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "pyiron_module_template"
-description = "pyiron_module_template - Your pyiron-like module."
+name = "node_library"
+description = "node_library - Your pyiron-like module."
 readme = "docs/README.md"
 keywords = [ "pyiron",]
 requires-python = ">=3.9, <3.13"
@@ -24,11 +24,12 @@ classifiers = [
     "Programming Language :: Python :: 3.12",
 ]
 dependencies = [
-    "pyiron_base==0.8.3"
+    "pyiron_workflow==0.8.0"
 ]
 dynamic = [ "version",]
 authors = [
-    { name = "Lorem Ipsum", email = "lorem@ipsum.com" },
+    { name = "Liam Huber", email = "liamhuber@greyhavensolutions.com" },
+    { name = "Joerg Neugebauer", email = "neugebauer@mpie.de" },
 ]
 
 [project.license]
@@ -36,18 +37,31 @@ file = "LICENSE"
 
 [project.urls]
 Homepage = "https://pyiron.org/"
-Documentation = "https://pyiron_module_template.readthedocs.io"
-Repository = "https://github.com/pyiron/pyiron_module_template"
+Documentation = "https://node_library.readthedocs.io"
+Repository = "https://github.com/pyiron/node_library"
 
 [tool.versioneer]
 VCS = "git"
 style = "pep440-pre"
-versionfile_source = "pyiron_module_template/_version.py"
-parentdir_prefix = "pyiron_module_template"
-tag_prefix = "pyiron_module_template-"
+versionfile_source = "node_library/_version.py"
+parentdir_prefix = "node_library"
+tag_prefix = "node_library-"
 
 [tool.setuptools.packages.find]
-include = [ "pyiron_module_template*",]
+include = [ "node_library*",]
 
 [tool.setuptools.dynamic.version]
-attr = "pyiron_module_template.__version__"
+attr = "node_library.__version__"
+
+[project.optional-dependencies]
+jnmpi_nodes = [
+    "ase==3.22.1",
+    "matgl==0.9.2",
+    "numpy==1.26.4",
+    "phonopy==2.22.1",
+    "pyiron_atomistics==0.5.4",
+    "pyiron_base==0.8.3"
+]
+plotting = [
+    "matplotlib==3.8.4"
+]

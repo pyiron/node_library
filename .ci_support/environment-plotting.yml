@@ -1,5 +1,4 @@
 channels:
   - conda-forge
 dependencies:
-  - pyiron_workflow =0.8.0
-  
+  - matplotlib =3.8.4

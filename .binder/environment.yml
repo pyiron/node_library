@@ -1,4 +1,13 @@
 channels:
 - conda-forge
 dependencies:
+- pyiron_workflow =0.8.0
+- ase =3.22.1
+- lammps
+- matgl = 0.9.2
+- numpy =1.26.4
+- phonopy =2.22.1
+- pyiron_atomistics =0.5.4
 - pyiron_base =0.8.3
+- pyiron-data =0.0.29
+- matplotlib =3.8.4
