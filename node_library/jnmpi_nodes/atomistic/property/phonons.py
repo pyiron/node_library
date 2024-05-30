@@ -77,7 +77,7 @@ def CreatePhonopy(
     # )["getitem"]
     self.forces = DictsToList(self.gs.outputs.df["out"], "forces")
 
-    from node_library.jnmpi_nodes.standard import SetAttr
+    from pyiron_workflow.node_library.standard import SetAttr
 
     self.phonopy_with_forces = SetAttr(self.phonopy, "forces", self.forces)
 
