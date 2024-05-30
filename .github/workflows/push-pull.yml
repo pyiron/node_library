@@ -15,4 +15,4 @@ jobs:
       do-unit-tests: false
       do-codacy: false
       do-benchmark-tests: false
-      notebooks-env-files: .ci_support/environment.yml .ci_support/environment-jnmpi_nodes.yml
+      notebooks-env-files: .ci_support/environment.yml .ci_support/environment-jnmpi_nodes.yml .ci_support/environment-plotting.yml

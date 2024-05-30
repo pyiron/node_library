@@ -62,3 +62,6 @@ jnmpi_nodes = [
     "pyiron_atomistics==0.5.4",
     "pyiron_base==0.8.3"
 ]
+plotting = [
+    "matplotlib==3.8.4"
+]
