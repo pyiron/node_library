@@ -1,29 +1,10 @@
+from pyiron_atomistics import _StructureFactory
 from pyiron_workflow.workflow import Workflow
 
 
-@Workflow.wrap.as_function_node("structure")
-def Bulk(
-    name,
-    crystalstructure=None,
-    a=None,
-    c=None,
-    covera=None,
-    u=None,
-    orthorhombic=False,
-    cubic=False,
-):
-    from pyiron_atomistics import _StructureFactory
-
-    return _StructureFactory().bulk(
-        name,
-        crystalstructure,
-        a,
-        c,
-        covera,
-        u,
-        orthorhombic,
-        cubic,
-    )
+Bulk = Workflow.wrap.as_function_node("structure")(_StructureFactory().bulk)
+Bulk.__name__ = "Bulk"
+Bulk.__module__ = __name__
 
 
 @Workflow.wrap.as_macro_node("structure")
