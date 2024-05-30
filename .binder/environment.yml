@@ -1,7 +1,7 @@
 channels:
 - conda-forge
 dependencies:
-- pyiron_workflow =0.7.1
+- pyiron_workflow =0.8.0
 - ase =3.22.1
 - lammps
 - matgl = 0.9.2
