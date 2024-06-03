@@ -55,7 +55,7 @@ attr = "node_library.__version__"
 
 [project.optional-dependencies]
 jnmpi_nodes = [
-    "ase==3.22.1",
+    "ase==3.23.0",
     "matgl==0.9.2",
     "numpy==1.26.4",
     "phonopy==2.22.1",
