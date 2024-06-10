@@ -60,7 +60,7 @@ jnmpi_nodes = [
     "numpy==1.26.4",
     "phonopy==2.22.1",
     "pyiron_atomistics==0.5.4",
-    "pyiron_base==0.8.3"
+    "pyiron_base==0.9.1"
 ]
 plotting = [
     "matplotlib==3.8.4"
